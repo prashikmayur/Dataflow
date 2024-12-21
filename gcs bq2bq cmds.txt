@@ -1,0 +1,19 @@
+python3 -m beam_pipeline.py \
+    --project=qwiklabs-gcp-04-f1f00290731a \
+    --region=US \
+    --source_table=qwiklabs-gcp-04-f1f00290731a.dataset1.department_data \
+    --destination_table=qwiklabs-gcp-04-f1f00290731a.dataset1.department_data2 \
+    --runner=DataflowRunner \
+    --staging_location=gs://dataflow-test-bucket-prashik/staging \
+    --temp_location=gs://dataflow-test-bucket-prashik/temp \
+    --template_location=gs://dataflow-test-bucket-prashik/template
+
+
+python3 -m beam_pipeline \
+    --project qwiklabs-gcp-04-f1f00290731a \
+    --region US \
+    --source_table qwiklabs-gcp-04-f1f00290731a.dataset1.department_data \
+    --destination_table qwiklabs-gcp-04-f1f00290731a.dataset1.department_data2 \
+    --runner DataflowRunner \
+    --staging_location gs://dataflow-test-bucket-prashik/staging \
+    --temp_location gs://dataflow-test-bucket-prashik/temp \
